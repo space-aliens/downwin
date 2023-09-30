@@ -45,12 +45,12 @@ class DownWin:
 
     def check_current_time(self, current_time,url, filename):
         """It check current time and do action accoriding to condition."""
-        # if current_time["hour"] == 23 and current_time["am/pm"] =="PM" and current_time["minate"] == 59:
-           # Start downloading a file
-        self._start_down(url, filename)
-        sys.exit()
+        if current_time["hour"] == 23 and current_time["am/pm"] =="PM" and current_time["minate"] == 59:
+        #    Start downloading a file
+            self._start_down(url, filename)
+            sys.exit()
 
-        # else:
-        #     sleep(60)
+        else:
+            sleep(60)
 
         
